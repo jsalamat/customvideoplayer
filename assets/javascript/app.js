@@ -10,10 +10,12 @@ const ranges = player.querySelectorAll('.progress__slider');
 //** Functions
 //- call .play or .pause
 function togglePlay() {
-	if(video.paused) {
-		video.play();
-	} else {
-		video.pause();
-	}
+	// ternary method
+	const method = video.paused ? 'play' : 'pause';
+	// call the video and access method named
+	video[method]();
 }
+
 //** Event Listener
+//click on event that run function togglePlay 
+video.addEventListener('click', togglePlay)
