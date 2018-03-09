@@ -16,15 +16,16 @@ function togglePlay() {
 	video[method]();
 }
 
-functio updateButton() {
+function updateButton() {
 	console.log('Update the Button');
 }
 
 //** Event Listener
 //click on event that run function togglePlay 
-video.addEventListener('click', togglePlay)
+video.addEventListener('click', togglePlay);
 
 // listen for video when paused and update the buttons
-video.addEventListener('play', togglePlay)
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
 
-toggle.addEventListener('click', togglePlay)
+toggle.addEventListener('click', togglePlay);
